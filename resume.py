@@ -198,6 +198,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("-q", "--quiet", action="store_true")
     parser.add_argument("--debug", action="store_true")
+    parser.add_argument("--output", help="Output file name", default="resume")
     args = parser.parse_args()
 
     if args.quiet:
@@ -219,4 +220,5 @@ if __name__ == "__main__":
             logging.info(f"Wrote {htmlfp.name}")
 
     if not args.no_pdf:
-        write_pdf(html, prefix=prefix, chrome=args.chrome_path)
+        pdf_prefix = os.path.splitext(os.path.abspath(args.output))[0]
+        write_pdf(html, prefix=pdf_prefix, chrome=args.chrome_path)
