@@ -1,18 +1,18 @@
 body {
     color: #000000;
-    background: #EEEEEE;
-    font: 1.1em "Times New Roman";
-    line-height: 1.2;
+    background: #eeeeee;
+    font: 1.1em 'Times New Roman';
+    line-height: 1.1;
     margin: 40px 0;
 }
 #resume {
     margin: 0 auto;
     max-width: 800px;
     padding: 40px 60px;
-    background: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    box-shadow: 2px 2px 4px #AAAAAA;
-    -webkit-box-shadow: 2px 2px 4px #AAAAAA;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 2px 2px 4px #aaaaaa;
+    -webkit-box-shadow: 2px 2px 4px #aaaaaa;
 }
 h1 {
     text-transform: uppercase;
@@ -29,36 +29,42 @@ h2 {
     padding: 0;
 }
 h3 {
-    font-size: 100%;
-    margin: 0.8em 0 0.3em 0;
+    font-size: 105%;
+    margin: 0.8em 0 0 0;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+h4 {
+    font-size: 100%;
+    margin: 0 0 0.3em 0;
     display: flex;
     justify-content: space-between;
 }
 p {
     margin: 0 0 0.5em 0;
     padding: 0;
-    }
+}
 ul {
     padding: 0;
     margin: 0 1.5em;
-    }
+}
 /* ul immediately after h1 = contact list */
 h1 + ul {
     text-align: center;
     margin: 0;
     padding: 0;
-    }
+}
 h1 + ul > li {
     display: inline;
     white-space: pre;
     list-style-type: none;
 }
 h1 + ul > li:after {
-    content: "  \2022  ";
+    content: '  \2022  ';
 }
 h1 + ul > li:last-child:after {
-    content: "";
+    content: '';
 }
 /* p immediately after contact list = summary */
 h1 + ul + p {
@@ -66,7 +72,7 @@ h1 + ul + p {
 }
 @media print {
     body {
-        font-size: 10pt;
+        font-size: 11pt;
         margin: 0;
         padding: 0;
         background: none;
@@ -86,7 +92,10 @@ h1 + ul + p {
     }
     /* Make links black in PDF */
     /* Move this outside the print block to apply this in HTML too */
-    a, a:link, a:visited, a:hover {
+    a,
+    a:link,
+    a:visited,
+    a:hover {
         color: #000000;
         text-decoration: underline;
     }
@@ -102,7 +111,7 @@ h1 + ul + p {
         font-size: 16pt;
         margin: 0;
         padding: 0;
-        background: #FFFFFF !important;
+        background: #ffffff !important;
     }
     #resume {
         margin: 0;
